@@ -8,7 +8,7 @@
 </head>
 <body>
   <header id="header">
-    <img id="logo" src="raphikou sans importance.png" alt="Logo Minuit sur Mesure" />
+    <img class="logo" src="raphikou sans importance.png" alt="Logo Minuit sur Mesure" />
   </header>
 
   <main>
@@ -37,22 +37,5 @@
     <p>&copy; 2025 Minuit sur mesure - Tous droits réservés</p>
   </footer>
 
-  <script>
-    const header = document.getElementById('header');
-    const logo = document.getElementById('logo');
-    let isShrunk = false;
-
-    window.addEventListener('scroll', () => {
-      const triggerHeight = 100;
-
-      if (window.scrollY > triggerHeight && !isShrunk) {
-        header.classList.add('shrink');
-        isShrunk = true;
-      } else if (window.scrollY <= triggerHeight && isShrunk) {
-        header.classList.remove('shrink');
-        isShrunk = false;
-      }
-    });
-  </script>
 </body>
 </html>
