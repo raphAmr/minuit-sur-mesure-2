@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minuit sur mesure</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header id="header">
+    <img id="logo" src="logo_orange.png" alt="Logo Minuit sur Mesure" />
+  </header>
+
+  <main>
+    <section class="content left">
+      <h2>À propos</h2>
+      <p>Je suis passionné par la musique et l'ambiance événementielle. Depuis plusieurs années, j'anime des soirées avec créativité, écoute et énergie pour faire danser tous les publics.</p>
+    </section>
+
+    <section class="content right">
+      <h2>Expériences</h2>
+      <p>J'ai mixé dans divers contextes : mariages, anniversaires, soirées privées et événements professionnels. Mon expertise s'adapte à chaque ambiance pour offrir un moment inoubliable.</p>
+    </section>
+
+    <section class="content left">
+      <h2>Notre prestation</h2>
+      <p>Nous proposons une prestation complète pour animer vos soirées. Elle comprend tout le matériel nécessaire pour diffuser la musique, un système de lumière professionnel pour créer une ambiance sur mesure, et bien sûr un DJ expérimenté qui vous accompagnera tout au long de l'événement.</p>
+    </section>
+
+    <section class="content center">
+      <h2>Contact</h2>
+      <p>Email : contact@minuitsurmesure.com<br>Tél : 06 00 00 00 00</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Minuit sur mesure - Tous droits réservés</p>
+  </footer>
+
+  <script>
+    const header = document.getElementById('header');
+    const logo = document.getElementById('logo');
+    let isShrunk = false;
+
+    window.addEventListener('scroll', () => {
+      const triggerHeight = 100;
+
+      if (window.scrollY > triggerHeight && !isShrunk) {
+        header.classList.add('shrink');
+        isShrunk = true;
+      } else if (window.scrollY <= triggerHeight && isShrunk) {
+        header.classList.remove('shrink');
+        isShrunk = false;
+      }
+    });
+  </script>
+</body>
+</html>
